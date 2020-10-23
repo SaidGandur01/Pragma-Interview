@@ -1,13 +1,20 @@
 <div class="row">
-  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-    <textarea class="fullwidth" type="text" placeholder="Enter the guest list (one guest per line)"></textarea>
-  </div>
-  <div class="col-xs-12  col-sm-6 col-md-6 col-lg-6">
-    <textarea class="fullwidth" type="text" placeholder="Enter the date range for each guest's stay (one range per line)"></textarea>
-  </div>
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <textarea [(ngModel)]="names" class="fullwidth" type="text" placeholder="Enter the guest list (one guest per line)"></textarea>
+    </div>
+    <div class="col-xs-12  col-sm-6 col-md-6 col-lg-6">
+        <textarea [(ngModel)]="dates" class="fullwidth" type="text" placeholder="Enter the date range for each guest's stay (one range per line)"></textarea>
+    </div>
 </div>
 <div class="row">
-  <div class="col-xs-12  col-sm-12 col-md-12 col-lg-12">
-  	<button class="fullwidth button btn btn-primary">Generate Menu List</button>
-  </div>
+    <div class="col-xs-12  col-sm-12 col-md-12 col-lg-12">
+        <button class="fullwidth button btn btn-primary" (click)="generateList()">Generate Menu List</button>
+    </div>
 </div>
+<ol id="list" *ngIf="bandera">
+    <div *ngFor="let item of items">
+        <li class="morning">Breakfast for {{ item }}</li>
+        <li class="afternoon">Lunch for {{ item }}</li>
+        <li class="night">Dinner for {{ item }}</li>
+    </div>
+</ol>
