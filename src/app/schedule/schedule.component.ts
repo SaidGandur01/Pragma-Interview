@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
 })
 export class ScheduleComponent {
   itemsList = [];
-  constructor() { }
+  constructor() {
+  }
 }
