@@ -11,4 +11,4 @@ En este ejercicio obtengo dos array, uno con los nombres y otro con las fechas, 
     
 Agradezco por la revisión del archivo y sobretodo el tiempo tomado para revisar el código.
 
-PD: No olvidar las depencias de node para poder correr el proyecto, satisfactoriamente con npm start.
+PD: No olvidar instalar las depencias de node para poder correr el proyecto, satisfactoriamente con npm start.
